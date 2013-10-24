@@ -4,35 +4,40 @@
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <%= stylesheet_link_tag "normalize.css" %>
+    <%= stylesheet_link_tag "font.css" %>
     <%= stylesheet_link_tag "site.css" %>
   </head>
   <body>
-    
+    <div id="header">
+      <%= link_to image_tag('logo-bar.png'), 'http://asciinema.org' %>
+    </div>
+
     <div id="main" role="main">
       <%= yield %>
     </div>
-    
-    <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
 
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to tag, tag_path(tag) %> (<%= articles.size %>)</a></li>
-        <% end %>
-      </ol>
+    <%# <aside> %>
+    <%#   <h2>Recent Articles</h2> %>
+    <%#   <ol> %>
+    <%#     <% blog.articles[0...10].each do |article| %1> %>
+    <%#       <li><%= link_to article.title, article %1> <span><%= article.date.strftime('%b %e') %1></span></li> %>
+    <%#     <% end %1> %>
+    <%#   </ol> %>
 
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to year, blog_year_path(year) %> (<%= articles.size %>)</a></li>
-        <% end %>
-      </ol>
-    </aside>
+    <%#   <h2>Tags</h2> %>
+    <%#   <ol> %>
+    <%#     <% blog.tags.each do |tag, articles| %1> %>
+    <%#       <li><%= link_to tag, tag_path(tag) %1> (<%= articles.size %1>)</a></li> %>
+    <%#     <% end %1> %>
+    <%#   </ol> %>
+
+    <%#   <h2>By Year</h2> %>
+    <%#   <ol> %>
+    <%#     <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %1> %>
+    <%#       <li><%= link_to year, blog_year_path(year) %1> (<%= articles.size %1>)</a></li> %>
+    <%#     <% end %1> %>
+    <%#   </ol> %>
+    <%# </aside> %>
+    <%= partial :disqus_comment_count %>
   </body>
 </html>

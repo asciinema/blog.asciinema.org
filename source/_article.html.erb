@@ -1,0 +1,10 @@
+<article>
+  <h1>
+    <%= link_to article.title, article %>
+    <span>Published on <%= article.date.strftime('%b %e') %> by Marcin Kulik</span>
+  </h1>
+  <%= article.body %>
+</article>
+<%= partial :add_this, locals: { url: article.url, title: article.title } %>
+<%= link_to 'Comment', article, anchor: 'disqus_thread' unless comments %>
+<%= partial :disqus if comments %>
