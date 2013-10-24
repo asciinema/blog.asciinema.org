@@ -1,3 +1,5 @@
+all: build
+
 build:
 	bundle exec middleman build
 
@@ -13,3 +15,5 @@ push:
 	git push heroku deploy:master -f
 
 deploy: build commit push
+
+.PHONY: build commit push deploy
