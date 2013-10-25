@@ -7,4 +7,8 @@
 </article>
 <%= partial :add_this, locals: { url: article.url, title: article.title } %>
 <%= link_to 'Comment', article, anchor: 'disqus_thread' unless comments %>
-<%= partial :disqus if comments %>
+
+<% if comments %>
+  <%= partial :disqus %>
+  <% content_for :title, current_page.title %>
+<% end %>
