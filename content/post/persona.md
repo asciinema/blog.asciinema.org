@@ -1,8 +1,8 @@
----
-title: Asciinema switching to Mozilla Persona for login
-date: 2013-10-24 19:47 UTC
-tags:
----
++++
+date = "2013-10-24T18:47:08+01:00"
+title = "Asciinema switching to Mozilla Persona for login"
+
++++
 
 So far you could log in to [Asciinema](http://asciinema.org) using your Github
 or Twitter account via OAuth. The idea behind this was twofold:

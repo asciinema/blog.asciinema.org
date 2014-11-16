@@ -1,12 +1,15 @@
 all: build
 
 build:
-	bundle exec middleman build
+	hugo
+
+server:
+	hugo server --buildDrafts --watch
 
 commit:
 	git branch -D deploy
 	git checkout -b deploy fresh-deploy
-	cp -r build/* .
+	cp -r public/* .
 	git add .
 	git commit -m 'Deploying'
 	git checkout -
@@ -16,4 +19,4 @@ push:
 
 deploy: build commit push
 
-.PHONY: build commit push deploy
+.PHONY: build server commit push deploy

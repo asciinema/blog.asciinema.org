@@ -1,0 +1,8 @@
+{{ template "theme/partials/header.html" . }}
+
+{{ range .Data.Pages }}
+  {{ template "theme/partials/post.html" . }}
+  <a href="{{ .Permalink }}#disqus_thread">Comment</a>
+{{ end }}
+
+{{ template "theme/partials/footer.html" . }}
