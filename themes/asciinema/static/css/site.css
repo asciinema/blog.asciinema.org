@@ -1,9 +1,9 @@
 body {
   background-color: white;
-  padding: 0 0 20px 0; }
+  padding: 0 20px 40px 20px; }
 
-div, p, span, table, td, li, article, a {
-  font-family: sans-serif; }
+div, p, span, table, td, li, article, a, h1, h2, h3 {
+  font-family: Consolas,Menlo,"Bitstream Vera Sans Mono",monospace; }
 
 #main, #header, aside {
   max-width: 750px;
@@ -29,20 +29,21 @@ div, p, span, table, td, li, article, a {
       text-transform: uppercase;
       margin-left: 20px; }
       #header ul li a {
-        text-decoration: none;
-        font-family: Exo, sans-serif; }
+        text-decoration: none; }
+      #header ul li a:hover {
+        text-decoration: underline; }
 
-h1, h2 {
-  font-family: Exo, sans-serif; }
-  h1 a, h2 a {
-    font-family: Exo, sans-serif;
-    text-decoration: none; }
+h1 a, h2 a {
+  text-decoration: none; }
+
+h1 a:hover, h2 a:hover {
+  text-decoration: underline; }
 
 h1 {
-  font-size: 28px; }
+  font-size: 24px; }
 
 h2 {
-  font-size: 24px; }
+  font-size: 20px; }
 
 a {
   color: #d95525; }
