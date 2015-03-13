@@ -1,4 +1,4 @@
 baseurl = "http://blog.asciinema.org"
 languageCode = "en-us"
-title = "Asciinema Blog"
+title = "asciinema blog"
 theme = "asciinema"

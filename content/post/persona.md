@@ -1,10 +1,10 @@
 +++
 date = "2013-10-24T18:47:08+01:00"
-title = "Asciinema switching to Mozilla Persona for login"
+title = "asciinema switching to Mozilla Persona for login"
 
 +++
 
-So far you could log in to [Asciinema](http://asciinema.org) using your Github
+So far you could log in to [asciinema](http://asciinema.org) using your Github
 or Twitter account via OAuth. The idea behind this was twofold:
 
 * avoid passwords,
@@ -17,9 +17,9 @@ reset is the new login"_. So the OAuth flow, being very simple for the user
 (given he/she is already logged in at the provider), helped
 achieving the initial goals.
 
-And while OAuth based login worked totally fine it made Asciinema dependent on
+And while OAuth based login worked totally fine it made asciinema dependent on
 commercial vendors for no good reason. OAuth was designed for API authorization
-between applications, not for user authentication. Asciinema doesn't need
+between applications, not for user authentication. asciinema doesn't need
 access to user's Github repositories nor user's tweets. It just needs the
 ability to authenticate a user. Also, the assumption that everyone has either
 Github or Twitter account is simply wrong.
@@ -31,9 +31,9 @@ we should. [Mozilla Persona](https://login.persona.org/), a reference
 implementation of BrowserID protocol, puts the email address at the center of
 authentication and gives us simple, privacy-sensitive single sign-in solution.
 
-Asciinema team believes in Mozilla's mission for promoting openness and
+asciinema team believes in Mozilla's mission for promoting openness and
 innovation on the web, and thus we switch to Persona based authentication,
-replacing the existing OAuth based flow. If you have an existing Asciinema
+replacing the existing OAuth based flow. If you have an existing asciinema
 account then fear not, you won't lose access to it. When signing in just use
 the same email address that you assigned to your account. If you don't remember
 which one you have used (or you haven't set the email address at all) then
