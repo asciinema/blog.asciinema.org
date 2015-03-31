@@ -17,7 +17,7 @@ allowed, for example in Github README files.
 You can get the embed snippets for a specific asciicast by clicking on "Embed"
 link on asciicast page.
 
-Here's an example of how it looks like:
+Here's an example of how the image link looks like:
 
 <a href="https://asciinema.org/a/17654" target="_blank"><img src="https://asciinema.org/a/17654.png" width="597"/></a>
 
