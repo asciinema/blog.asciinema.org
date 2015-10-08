@@ -19,7 +19,7 @@ link on asciicast page.
 
 Here's an example of how the image link looks like:
 
-<a href="https://asciinema.org/a/17654" target="_blank"><img src="https://asciinema.org/a/17654.png" width="597"/></a>
+<a href="https://asciinema.org/a/22124" target="_blank"><img src="https://asciinema.org/a/22124.png" width="596"/></a>
 
 ## Embedding on Slack, Twitter and Facebook
 
