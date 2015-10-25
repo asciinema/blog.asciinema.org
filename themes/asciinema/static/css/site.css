@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  padding: 0 15px 40px 15px; }
+  padding: 0 25px 40px 25px; }
 
 div, p, span, table, td, li, article, a, h1, h2, h3 {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
@@ -8,7 +8,7 @@ div, p, span, table, td, li, article, a, h1, h2, h3 {
 #main, #header, aside {
   max-width: 750px;
   margin: 0 auto;
-  padding: 0 20px; }
+  padding: 0; }
 
 #header {
   height: 48px;
