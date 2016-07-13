@@ -61,7 +61,7 @@ a {
 article {
   margin-bottom: 60px;
   margin-top: 40px; }
-  article p, article div, article span, article td {
+  article p, article div, article span, article td, li {
     line-height: 1.5; }
   article h1 span {
     display: block;
@@ -71,6 +71,8 @@ article {
     margin: 16px 0; }
   article img {
     max-width: 100%; }
+  article ul {
+    padding-left: 25px; }
 
 aside ol {
   list-style: none;
