@@ -63,3 +63,24 @@ only on single platform then many of the above points may become non-issue for
 you.
 
 Anyway, it feels good to be back on Python!
+
+**2016-07-14 update:** Many people raised a question: why was it ported from
+Python to Go in the first place? There were several reasons. First, Go's static
+binaries nicely solve the packaging problem (we didn't have that many native
+packages then and `pip install asciinema` wasn't always reliable due to the fact
+that it supported both Python 2 and 3). It later appeared that majority of
+people prefer native packages so distributing precompiled binaries wasn't a big
+win for this type of project in the end. Second, Go was initially advertised as
+a "systems language", and if your program does system stuff like
+`select/signal/ioctl` then Go should be perfect, right? Well, it appears that Go
+excels (and was built for) slightly different things (multi-core concurrency,
+networking, distributed systems). It is no longer advertised as a "systems
+language" by its authors. Third, Go's static type system with type inference and
+functions as first class citizens felt like a nice bonus. In reality, the lack
+of generics forces you to write lots of boilerplate and repetitive code. 20
+lines of boilerplate, imperative code is not simpler and easier to understand
+(like some Go defendants claim) than 2 lines of higher level code because it
+adds noise to the essence of algorithm. When reading code you don't need that
+level of granularity in most cases. Well, at least I don't need it :) Fourth, it
+was interesting to apply my knowledge of this domain to a language with
+different qualities. I would lie if I said having fun wasn't part of the thing.
