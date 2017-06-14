@@ -36,7 +36,7 @@ need to worry about it. ClojureScript compiler does a wonderful job of
 converting high level Clojure code into highly optimized, fast JavaScript code.
 If it's possible to build a performant player like this one in ClojureScript
 then you can build anything in ClojureScript. Look at the
-[source](https://github.com/asciinema/asciinema-player/tree/master/src/cljs/asciinema_player)
+[source](https://github.com/asciinema/asciinema-player/tree/master/src/asciinema/player)
 if you're curious how it looks like.
 
 Check
