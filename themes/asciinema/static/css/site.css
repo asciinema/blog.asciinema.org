@@ -87,6 +87,8 @@ article p, article div, article span, article td, li {
 
 article h1 {
   margin-bottom: 2em;
+  border-left: 2px solid #d40000;
+  padding-left: 10px;
 }
 
 article h1 a {
