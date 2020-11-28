@@ -3,6 +3,7 @@
 {{ range .Data.Pages }}
   {{ template "partials/post.html" . }}
   <a href="{{ .Permalink }}#disqus_thread">Comment</a>
+  <hr>
 {{ end }}
 
 {{ template "partials/footer.html" . }}
