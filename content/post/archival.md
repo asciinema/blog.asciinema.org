@@ -5,7 +5,7 @@ title = "Archival of unclaimed recordings"
 +++
 
 Since asciinema's inception in 2012 there were over 200,000 asciicasts uploaded
-to asciinema.org 🎉😻.
+to asciinema.org&nbsp;🎉😻.
 
 As of today (end of 2018) there are ~85,000 unclaimed recordings, which are ones
 that have been uploaded by anonymous users, who never linked their installation
