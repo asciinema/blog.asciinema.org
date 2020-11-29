@@ -35,12 +35,12 @@ printed in the terminal:
 
         https://asciinema.org/a/159P2NxIoO6vkGS4lM259Y72A
 
-    This installation of asciinema recorder hasn't been linked to any localhost
+    This installation of asciinema recorder hasn't been linked to any asciinema.org
     account. All unclaimed recordings (from unknown installations like this one)
     are automatically archived 7 days after upload.
 
     If you want to preserve all recordings made on this machine, connect this
-    installation with localhost account by opening the following link:
+    installation with asciinema.org account by opening the following link:
 
         https://asciinema.org/connect/<your-install-id>
 
