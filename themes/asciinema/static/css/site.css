@@ -1,8 +1,11 @@
 body {
-  font-family: Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace;
   font-size: 15px;
   background-color: white;
   margin: 3em 3em 3em 3em;
+}
+
+body, pre, code {
+  font-family: Consolas, Menlo, 'Bitstream Vera Sans Mono', monospace;
 }
 
 #main, #header, aside {
