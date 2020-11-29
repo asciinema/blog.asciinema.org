@@ -5,3 +5,6 @@ theme = "asciinema"
 
 [markup.goldmark.renderer]
 unsafe = true
+
+[markup.highlight]
+style = "friendly"

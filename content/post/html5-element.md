@@ -14,14 +14,18 @@ This new version makes self-hosting of the player even simpler. Let's see an exa
 
 Before:
 
-    <div id="player-container"></div>
-    <script>
-      asciinema.player.js.CreatePlayer('player-container', '/demo.json');
-    </script>
+```html
+<div id="player-container"></div>
+<script>
+  asciinema.player.js.CreatePlayer('player-container', '/demo.json');
+</script>
+```
 
 Today:
 
-    <asciinema-player src="/demo.json"></asciinema-player>
+```html
+<asciinema-player src="/demo.json"></asciinema-player>
+```
 
 Awesome, right?
 

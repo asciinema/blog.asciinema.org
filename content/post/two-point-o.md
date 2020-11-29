@@ -45,8 +45,10 @@ the recorder, player and server won't be able to play v2 recordings though.
 Previous versions of asciinema supported in-terminal playback by piping in the
 recording to its stdin:
 
-    cat /path/to/asciicast.json | asciinema play -
-    ssh user@host cat asciicast.json | asciinema play -
+```bash
+cat /path/to/asciicast.json | asciinema play -
+ssh user@host cat asciicast.json | asciinema play -
+```
 
 While useful in some scenarios, the whole recording had to be read into memory
 before starting the playback (you can't easily parse JSON partially). New
@@ -56,30 +58,36 @@ receiving the header line.
 For example, you can now do terminal-to-terminal streaming via a [named Unix
 pipe](https://en.wikipedia.org/wiki/Named_pipe#In_Unix):
 
-    mkfifo /tmp/demo.pipe
+```bash
+mkfifo /tmp/demo.pipe
 
-    # viewing terminal
-    asciinema play /tmp/demo.pipe
+# viewing terminal
+asciinema play /tmp/demo.pipe
 
-    # recording terminal
-    asciinema rec /tmp/demo.pipe
+# recording terminal
+asciinema rec /tmp/demo.pipe
+```
 
 Or stream terminal over the network with `netcat`:
 
-    # viewing terminal (hostname: node123)
-    asciinema play <(nc -l localhost 9999)
+```bash
+# viewing terminal (hostname: node123)
+asciinema play <(nc -l localhost 9999)
 
-    # recording terminal
-    asciinema rec >(nc node123 9999)
+# recording terminal
+asciinema rec >(nc node123 9999)
+```
 
 With new `--raw` recording mode (more on that below) you don't even need
 asciinema installed on the viewing machine:
 
-    # viewing terminal (hostname: node123)
-    nc -l localhost 9999
+```bash
+# viewing terminal (hostname: node123)
+nc -l localhost 9999
 
-    # recording terminal
-    asciinema rec --raw >(nc node123 9999)
+# recording terminal
+asciinema rec --raw >(nc node123 9999)
+```
 
 ## Appending to existing recording
 
@@ -88,34 +96,44 @@ This can be useful when you want to take a break when recording.
 
 Start recording:
 
-    asciinema rec demo.cast
+```bash
+asciinema rec demo.cast
+```
 
 When you need a break, press `<ctrl+d>` to finish recording. Then when you're ready to continue run:
 
-    asciinema rec --append demo.cast
+```bash
+asciinema rec --append demo.cast
+```
 
 You can do this as many times as you want.
 
 ## Raw recording mode
 
 You can now save raw stdout output, without timing information or other
-metadata, to a file:   
+metadata, to a file:
 
-    asciinema rec --raw output.txt
+```bash
+asciinema rec --raw output.txt
+```
 
 The output file produced in this case is not in asciicast format, and is exactly like the one produced by
 [script](http://man7.org/linux/man-pages/man1/script.1.html) command (without timing file).
 
 You can then use `cat` to print the result of the whole session:
 
-    cat output.txt
+```bash
+cat output.txt
+```
 
 ## Stdin (keystroke) recording
 
 Stdin recording allows for capturing of all characters typed in by the user in
 the currently recorded shell:
 
-    asciinema rec --stdin demo.cast
+```bash
+asciinema rec --stdin demo.cast
+```
 
 This may be used to display pressed keys during playback in
 [asciinema-player](https://github.com/asciinema/asciinema-player) (not
@@ -139,11 +157,15 @@ immediately.
 
 When you have existing recording, this command:
 
-    asciinema cat existing.cast >output.txt
+```bash
+asciinema cat existing.cast >output.txt
+```
 
 produces the same result as recording raw output with:
 
-    asciinema rec --raw output.txt
+```bash
+asciinema rec --raw output.txt
+```
 
 ## Summary
 

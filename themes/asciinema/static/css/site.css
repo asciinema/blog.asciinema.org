@@ -125,13 +125,13 @@ aside ol li {
 }
 
 pre, code {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 
 pre {
   padding: 1em;
   line-height: 1.5;
-  border-radius: 0.4em;
+  border-radius: 0.3em;
   margin: 2em 0;
   overflow: auto;
 }
@@ -144,6 +144,7 @@ code {
 
 pre code {
   padding: 0;
+  background-color: inherit;
 }
 
 hr {
