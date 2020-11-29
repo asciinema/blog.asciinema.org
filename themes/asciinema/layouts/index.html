@@ -1,6 +1,6 @@
 {{ template "partials/header.html" . }}
 
-{{ range .Data.Pages }}
+{{ range .Site.RegularPages }}
   {{ template "partials/post.html" . }}
   <hr>
 {{ end }}

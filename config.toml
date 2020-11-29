@@ -2,3 +2,6 @@ baseurl = "https://blog.asciinema.org"
 languageCode = "en-us"
 title = "asciinema blog"
 theme = "asciinema"
+
+[markup.goldmark.renderer]
+unsafe = true
