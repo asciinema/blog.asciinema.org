@@ -124,10 +124,6 @@ aside ol li {
   display: block;
 }
 
-#disqus_thread {
-  min-height: 100px;
-}
-
 pre, code {
   background-color: #eee;
 }

@@ -2,7 +2,6 @@
 
 {{ range .Data.Pages }}
   {{ template "partials/post.html" . }}
-  <a href="{{ .RelPermalink }}#disqus_thread">Comment</a>
   <hr>
 {{ end }}
 
