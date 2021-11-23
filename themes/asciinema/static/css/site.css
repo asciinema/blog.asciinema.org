@@ -160,3 +160,21 @@ hr {
   border-left: none;
   border-right: none;
 }
+
+table {
+  border: 1px dotted black;
+  margin: 3em 0;
+}
+
+table th, table td {
+  padding: 0.5em 1em 0.5em 1em;
+  border-bottom: 1px dotted black;
+}
+
+table tbody tr:last-child th, table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+div.player {
+  margin: 3em 0;
+}
