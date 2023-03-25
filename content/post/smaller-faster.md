@@ -71,7 +71,7 @@ spending additional time on optimizing the emulation part is absolutely
 unnecessary.
 
 The numbers show how many megabytes of text the terminal emulator can process in
-each player version:
+each player version (tested on Chrome 88):
 
 | recording                      | v2.6 (MB/s)        | v3.0 (MB/s)       | ratio |
 |--------------------------------|--------------------|-------------------|-------|
