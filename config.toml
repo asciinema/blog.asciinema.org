@@ -7,4 +7,4 @@ theme = "asciinema"
 unsafe = true
 
 [markup.highlight]
-style = "friendly"
+style = "dracula"

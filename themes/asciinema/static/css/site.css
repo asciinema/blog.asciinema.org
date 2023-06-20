@@ -178,3 +178,21 @@ table tbody tr:last-child th, table tbody tr:last-child td {
 div.player {
   margin: 3em 0;
 }
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    color: #e8e6e3;
+  }
+
+  body {
+    background-color: rgb(24, 26, 27);
+  }
+
+  pre, code {
+    background-color: #303335;
+  }
+
+  a {
+    color: rgb(255, 56, 56);
+  }
+}
