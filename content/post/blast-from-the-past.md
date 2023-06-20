@@ -106,6 +106,7 @@ Let's write asciinema player parser for it:
 const LINES_PER_FRAME = 14;
 const FRAME_DELAY = 67;
 const COLUMNS = 67;
+const ROWS = LINES_PER_FRAME - 1;
 
 async function parseAsciimation(response) {
   const text = await response.text();
@@ -126,7 +127,7 @@ async function parseAsciimation(response) {
     output.push([time / 1000, text]);
   }
 
-  return { cols: COLUMNS, rows: LINES_PER_FRAME - 1, output };
+  return { cols: COLUMNS, rows: ROWS, output };
 }
 
 AsciinemaPlayer.create(
