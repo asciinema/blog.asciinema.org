@@ -20,7 +20,7 @@
 </head>
 <body>
   <div id="header">
-    <a href="{{ .Site.BaseURL }}"><img src="/img/logo-red.svg" style="height: 2em" /></a>
+    <a href="{{ .Site.BaseURL }}"><img src="/img/logo-red.svg" class="asciinema-logo" /></a>
     <span>asciinema blog</span>
     <ul>
       {{ with .OutputFormats.Get "RSS" }}<li><a href="{{ .Permalink }}">RSS</a></li>{{ end }}
@@ -34,7 +34,7 @@
         <a href="https://asciinema.org/docs">Docs</a>
       </li>
       <li>
-        <a href="/">Blog</a>
+        <a href="https://fosstodon.org/@asciinema" title="Follow asciinema on Mastodon"><img src="/img/mastodon-logo-black.svg" class="mastodon-logo" alt="Mastodon logo" /></a>
       </li>
   </div>
 
