@@ -83,7 +83,7 @@ article {
   margin-top: 3em;
 }
 
-article p, article div, article span, article td, li {
+p, article div, article span, article td, li {
   line-height: 1.5;
 }
 
