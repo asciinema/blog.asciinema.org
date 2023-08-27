@@ -31,9 +31,13 @@ body, pre, code {
 }
 
 #header .icon svg {
-  height: 1.5em;
+  height: 1.7em;
   position: relative;
   top: 0.2em;
+}
+
+#header .mastodon-icon svg {
+  height: 1.5em;
 }
 
 #header span {

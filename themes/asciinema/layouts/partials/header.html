@@ -23,7 +23,6 @@
     <a href="{{ .Site.BaseURL }}"><img src="/img/logo-red.svg" class="asciinema-logo" /></a>
     <span>asciinema blog</span>
     <ul>
-      {{ with .OutputFormats.Get "RSS" }}<li><a href="{{ .Permalink }}">RSS</a></li>{{ end }}
       <li>
         <a href="https://asciinema.org/explore">Watch</a>
       </li>
@@ -34,10 +33,13 @@
         <a href="https://asciinema.org/docs">Docs</a>
       </li>
       <li>
-        <a href="https://fosstodon.org/@asciinema" title="Follow asciinema on Mastodon" class="icon">
-          {{ template "partials/mastodon-logo.svg" . }}
+        <a href="https://fosstodon.org/@asciinema" title="Follow asciinema on Mastodon" class="icon mastodon-icon">
+          {{ template "partials/mastodon-icon.svg" . }}
         </a>
       </li>
+      {{ with .OutputFormats.Get "RSS" }}<li><a href="{{ .Permalink }}" title="RSS Feed" class="icon">
+        {{ template "partials/rss-icon.svg" . }}
+      </a></li>{{ end }}
   </div>
 
   <div id="main" role="main">
