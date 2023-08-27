@@ -26,7 +26,11 @@ body, pre, code {
   margin-bottom: 0.67em;
 }
 
-#header img.mastodon-logo {
+#header .icon svg {
+  color: black;
+}
+
+#header .icon svg {
   height: 1.5em;
   position: relative;
   top: 0.2em;
@@ -203,5 +207,9 @@ div.player {
 
   a {
     color: rgb(255, 56, 56);
+  }
+
+  #header .icon svg {
+    color: #e8e6e3;
   }
 }
