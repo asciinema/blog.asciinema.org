@@ -140,9 +140,7 @@ AsciinemaPlayer.create(
 
 Here it is in action:
 
-<link rel="stylesheet" type="text/css" href="/player/3.4.0/asciinema-player.css" />
 <div id="demo-starwars" class="player"></div>
-<script src="/player/3.4.0/asciinema-player.min.js"></script>
 
 <script>
 const LINES_PER_FRAME = 14;

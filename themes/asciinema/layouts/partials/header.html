@@ -12,6 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" type="text/css" href="/player/3.5.0/asciinema-player.css" />
 
     <!-- RSS -->
     {{ with .OutputFormats.Get "rss" -}}
@@ -19,6 +20,8 @@
     {{ end -}}
 </head>
 <body>
+  <script src="/player/3.5.0/asciinema-player.min.js"></script>
+
   <div id="header">
     <a href="{{ .Site.BaseURL }}"><img src="/img/logo-red.svg" class="asciinema-logo" /></a>
     <span>asciinema blog</span>
