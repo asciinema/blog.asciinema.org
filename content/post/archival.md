@@ -17,6 +17,8 @@ auto-archival ([related
 PR](https://github.com/asciinema/asciinema-server/pull/333)) on asciinema.org
 soon.
 
+<!--more-->
+
 ## What's auto-archival?
 
 The idea behind this feature is to automatically "garbage collect" all unclaimed

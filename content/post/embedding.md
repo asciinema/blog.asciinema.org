@@ -7,6 +7,8 @@ title = "New ways of asciicast embedding"
 Support for embedding asciicasts just got way more awesome. See [embedding
 docs](https://asciinema.org/docs/embedding) for details, read on for examples.
 
+<!--more-->
+
 ## Embedding on your site
 
 In addition to the existing support for embedding full player widget on your

@@ -17,6 +17,8 @@ reset is the new login"_. So the OAuth flow, being very simple for the user
 (given he/she is already logged in at the provider), helped
 achieving the initial goals.
 
+<!--more-->
+
 And while OAuth based login worked totally fine it made asciinema dependent on
 commercial vendors for no good reason. OAuth was designed for API authorization
 between applications, not for user authentication. asciinema doesn't need

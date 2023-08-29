@@ -18,6 +18,8 @@ all about (input is handled by your terminal+shell at the time of recording
 anyway). Handling of escape sequences is fully compatible with most modern
 terminal emulators like xterm, Gnome Terminal, iTerm, mosh etc.
 
+<!--more-->
+
 This is cool in itself, but the best part of it is that it enables self-hosting
 of the recordings on your own website, without depending on
 [asciinema.org](https://asciinema.org). If you're not comfortable keeping your

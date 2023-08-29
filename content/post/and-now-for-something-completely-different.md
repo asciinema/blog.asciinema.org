@@ -14,6 +14,8 @@ See
 for a detailed list of changes, continue reading for motivation on transitioning
 back to Python.
 
+<!--more-->
+
 Wait, what? Back to Python? Yes, asciinema 1.3 brings back the original Python
 implementation of asciinema. It's based on 0.9.8 codebase and adds all features
 and bug fixes that have been implemented in asciinema's Go version between 0.9.8

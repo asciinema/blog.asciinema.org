@@ -12,6 +12,8 @@ but this one definitely deserves a post of its own.
 
 This new version makes self-hosting of the player even simpler. Let's see an example.
 
+<!--more-->
+
 Before:
 
 ```html

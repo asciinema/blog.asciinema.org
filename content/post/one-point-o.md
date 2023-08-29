@@ -13,6 +13,8 @@ See
 for a detailed list of changes, continue reading for highlights of this
 important release.
 
+<!--more-->
+
 ## Idle time optimization
 
 Did you ever wish you had more powerful machine because this software

@@ -12,6 +12,8 @@ Long story short: asciinema-player has been reimplemented from scratch in
 JavaScript and Rust, resulting in 50x faster virtual terminal interpreter, while
 at the same time, reducing the size of the JS bundle 4x.
 
+<!--more-->
+
 You may wonder what prompted the move from the previous ClojureScript
 implementation. As much as I love Clojure/ClojureScript there were several major
 and minor problems I couldn't solve, mostly around these 3 areas:

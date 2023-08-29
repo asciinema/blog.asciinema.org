@@ -1,0 +1,14 @@
+<article>
+  <h1>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>Published on {{ .Date.Format "02 Jan 2006" }} by Marcin Kulik</span>
+  </h1>
+
+  <p>
+    {{ .Summary }}
+  </p>
+
+  <p>
+    <a href="{{ .RelPermalink }}">Read More</a>
+  </p>
+</article>

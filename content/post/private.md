@@ -10,6 +10,8 @@ the inception of asciinema all recordings has been public. We wanted to
 encourage you to share your knowledge, show off your tricks, and allow others
 to learn from it.
 
+<!--more-->
+
 It appears though that the nature of the asciicasts is often semi-private. Many
 of you would like to record something and share it with a selected group of
 people only, your team-mates for example. There were [requests

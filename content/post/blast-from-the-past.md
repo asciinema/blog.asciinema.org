@@ -15,6 +15,8 @@ files with fellow geeks, who could watch the recordings in their browsers. I
 wrote a rough parser/interpreter for typescript format and got some characters
 moving happily on a page with the help of a bunch `<div>` and `<span>` elements.
 
+<!--more-->
+
 Back then, `script` version found in most Linux distros was capable of saving
 timing information to a second file with `-t` option (later deprecated,
 superseded with newer `-T`). For playback, timing information is essential, so

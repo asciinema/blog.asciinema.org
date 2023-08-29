@@ -14,6 +14,8 @@ Below we'll go through all the changes in detail, you can also read the
 [CHANGELOG](https://github.com/asciinema/asciinema/blob/master/CHANGELOG.md#20-2018-02-10)
 for a shorter version.
 
+<!--more-->
+
 ## asciicast v2 file format
 
 asciinema 2.0 saves recordings in new [asciicast v2
