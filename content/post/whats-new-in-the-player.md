@@ -1,6 +1,6 @@
 +++
 date = "2023-08-31T10:00:00+01:00"
-title = "What's new in asciinema player"
+title = "What's new in asciinema - part I: the player"
 
 +++
 
@@ -149,9 +149,9 @@ option which tells the player to automatically pause the playback when reaching
 next marker. This is super useful for "live" demos as it lets you discuss
 terminal output at precise points.
 
-This concludes player-related improvements. In the next post we'll take a look
-at what's new in [the recorder](https://github.com/asciinema/asciinema), aka
-cli.
+This concludes player-related improvements. In the [next
+post](/post/whats-new-in-the-recorder/), we'll take a look at what's new in [the
+recorder](https://github.com/asciinema/asciinema), aka CLI.
 
 Until my next update, happy recording!
 
