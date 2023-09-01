@@ -65,6 +65,14 @@ body, pre, code {
   text-decoration: none;
 }
 
+#header li em a {
+  color: white;
+  background-color: #d40000;
+  font-style: normal;
+  border-radius: 3px;
+  padding: 3px 6px;
+}
+
 #header ul li a:hover {
   text-decoration: underline;
 }
