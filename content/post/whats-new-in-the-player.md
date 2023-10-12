@@ -79,7 +79,7 @@ player.addEventListener('input', e => {
 }); 
 ```
 
-Below is the result (make sure your sound is not muted):
+Below is the result (make sure your audio is not on mute):
 
 <div id="demo-evol-input" class="player"></div>
 
