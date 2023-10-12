@@ -108,8 +108,8 @@ asciinema play --stream=i demo.cast | asciinema rec - | websocat -q ws-l:127.0.0
 
 A live stream is driven by key presses from an existing recording! 🤯
 
-This concludes recorder-related improvements. I hope you enjoyed it. In the next
-post, we'll take a look at what's new in [the
+This concludes recorder-related improvements. I hope you enjoyed it. In the [next
+post](/post/whats-new-in-the-server/), we'll take a look at what's new in [the
 server](https://github.com/asciinema/asciinema-server) and maybe a few other
 things.
 
