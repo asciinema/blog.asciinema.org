@@ -71,7 +71,7 @@ want to play Cherry MX Brown (eeewww!) sound for each key press.
 ```javascript
 const player = AsciinemaPlayer.create({
   url: '/typing.cast',
-  inputOffset: -0.2
+  inputOffset: -0.125
 }, document.getElementById('demo'));
 
 player.addEventListener('input', e => {
@@ -91,7 +91,7 @@ callback, has `data` property, which corresponds to asciicast input event's 3rd
 field ("t" in the example earlier). This can be used to check which key was
 pressed and what sample to play.
 
-I used new `inputOffset` option with a value of `-0.2` (sec) to shift input
+I used new `inputOffset` option with a value of `-0.125` (sec) to shift input
 events in time. I did it because the key press sample I use has a bit of a slow
 attack, so by firing the sound slightly earlier I got the audio in better sync
 with the display.
@@ -163,7 +163,7 @@ const opts = {
 
 const player1 = AsciinemaPlayer.create({
   url: '/casts/typing.cast',
-  inputOffset: -0.2
+  inputOffset: -0.125
 }, document.getElementById('demo-evol-input'), {
   ...opts,
   rows: 15,
