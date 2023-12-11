@@ -42,7 +42,7 @@
           {{ template "partials/mastodon-icon.svg" . }}
         </a>
       </li>
-      {{ with .OutputFormats.Get "RSS" }}<li><a href="{{ .Permalink }}" title="RSS Feed" class="icon">
+      {{ with .OutputFormats.Get "RSS" }}<li><a href="{{ .Permalink }}" title="RSS Feed" class="icon rss-icon">
         {{ template "partials/rss-icon.svg" . }}
       </a></li>{{ end }}
   </div>

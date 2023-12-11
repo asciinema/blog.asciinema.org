@@ -38,6 +38,11 @@ body, pre, code {
 
 #header .mastodon-icon svg {
   height: 1.5em;
+  color: #6364ff;
+}
+
+#header .rss-icon svg {
+  color: #f36b2b;
 }
 
 #header span {
