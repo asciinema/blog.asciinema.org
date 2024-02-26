@@ -7,10 +7,9 @@ title = "What's new in asciinema - part I: the player"
 There's been a steady stream of asciinema releases over the last 12 months and I
 thought it would be nice to bring notable additions and improvements to the
 light. This is the first post in the "what's new in asciinema" series, in which
-I'll focus primarily on [the
-player](https://github.com/asciinema/asciinema-player), highlighting changes I
-find most interesting. I will cover other parts of the asciinema stack in future
-posts.
+I'll focus primarily on [the player](https://docs.asciinema.org/manual/player/),
+highlighting changes I find most interesting. I will cover other parts of the
+asciinema stack in future posts.
 
 <!--more-->
 
@@ -29,15 +28,15 @@ Control bar display behaviour was improved in v3.2. The bar was moved below the
 last terminal line. In previous versions it already automatically disappeared
 when player detected lack of user interaction, however it still obscured the
 last terminal line during such interaction. Later, in v3.4, new
-[controls](https://github.com/asciinema/asciinema-player#controls) option was
-added which can be used to force control bar to be always visible (`true`) or
-always hidden (`false`). You can see the "always-on" control bar in the markers
-demo later in this post.
+[controls](https://docs.asciinema.org/manual/player/options/#controls) option
+was added which can be used to force control bar to be always visible (`true`)
+or always hidden (`false`). You can see the "always-on" control bar in the
+markers demo later in this post.
 
 This same release introduced the concept of [recording
-parsers](https://github.com/asciinema/asciinema-player/blob/main/src/parser/README.md),
-which allows playback of terminal sessions in formats other than player's native
-asciicast format. Later, player v3.4 bundled parsers for
+parsers](https://docs.asciinema.org/manual/player/parsers/), which allows
+playback of terminal sessions in formats other than player's native asciicast
+format. Later, player v3.4 bundled parsers for
 [ttyrec](https://nethackwiki.com/wiki/Ttyrec) and typescript files (produced by
 [script command](https://www.man7.org/linux/man-pages/man1/script.1.html)). See
 my [Blast from the past](/post/blast-from-the-past/) post for Star Wars
@@ -47,12 +46,12 @@ Also in v3.2 player got ability to step through a (paused) recording one frame
 at a time by pressing `.` (dot) key. This adds to a list of other useful key
 bindings like `space` (toggle play/pause), `f` (toggle fullscreen), `]` (jump to
 next marker, see below), and [few
-others](https://github.com/asciinema/asciinema-player#keyboard-shortcuts). Feel
-free to test these in the player below.
+others](https://docs.asciinema.org/manual/player/shortcuts/). Feel free to test
+these in the player below.
 
 Then, with v3.3, the player became more friendly for Reveal.js slide embeds.
 However, probably the highlight of the release is support for [input
-events](https://github.com/asciinema/asciinema/blob/develop/doc/asciicast-v2.md#i---input-data-read-from-the-terminal)
+events](https://docs.asciinema.org/manual/asciicast/v2/#i-input-data-read-from-a-terminal)
 embedded in asciicast files when recording with input capture enabled
 (`asciinema rec --stdin demo.cast`).
 
@@ -65,7 +64,7 @@ following event line:
 
 If you're self-hosting the player you can subscribe to input events with
 `player.addEventListener`
-([doc](https://github.com/asciinema/asciinema-player#input-event)). Say, you
+([doc](https://docs.asciinema.org/manual/player/api/#input-event)). Say, you
 want to play Cherry MX Brown (eeewww!) sound for each key press.
 
 ```javascript
@@ -76,7 +75,7 @@ const player = AsciinemaPlayer.create({
 
 player.addEventListener('input', e => {
   playSound('/Cherry_MX_Brown.wav');
-}); 
+});
 ```
 
 Below is the result (make sure your audio is not on mute):
@@ -97,8 +96,8 @@ attack, so by firing the sound slightly earlier I got the audio in better sync
 with the display.
 
 Next, player v3.4 and
-[markers](https://github.com/asciinema/asciinema-player#markers-1). This feature
-was often requested, and one which was added to the whole stack (player, server,
+[markers](https://docs.asciinema.org/manual/player/markers/). This feature was
+often requested, and one which was added to the whole stack (player, server,
 recorder). Let's take a look at that next.
 
 In the player below notice the dots on the timeline. Those are markers which,
@@ -110,15 +109,16 @@ interesting points in the timeline of a recording.
 As expected, clicking on a marker fast-forwards/rewinds the recording to
 selected position.  You can also navigate between markers by pressing the `[`
 and `]` keys which respectively jump to previous and next marker. You can also
-[seek](https://github.com/asciinema/asciinema-player#seeklocation) to a marker
+[seek](https://docs.asciinema.org/manual/player/api/#seeklocation) to a marker
 programatically.
 
 There are several ways to add markers to a recording. If you keep your
 recordings on [asciinema.org](https://asciinema.org) or you [self-host the
-server](https://github.com/asciinema/asciinema-server/) you can add markers on
-recording's settings page. If you use the player on your own site you can pass
-markers via new [markers](https://github.com/asciinema/asciinema-player#markers)
-option like this:
+server](https://docs.asciinema.org/manual/server/self-hosting/) you can add
+markers on recording's settings page. If you use the player on your own site you
+can pass markers via new
+[markers](https://docs.asciinema.org/manual/player/options/#markers) option like
+this:
 
 ```javascript
 AsciinemaPlayer.create('/demo.cast', document.getElementById('demo'), {
@@ -140,18 +140,18 @@ similar to input events we saw earlier, but the event code is `m` here:
 
 Those can be added to a recording either during the recording session by
 pressing a hotkey (see `rec.add_marker_key` [config
-option](https://github.com/asciinema/asciinema#configuration-file)) or after
+option](https://docs.asciinema.org/manual/cli/configuration/)) or after
 recording by adding lines like the one above to the asciicast file.
 
 There's also new
-[pauseOnMarkers](https://github.com/asciinema/asciinema-player#pauseonmarkers)
+[pauseOnMarkers](https://docs.asciinema.org/manual/player/options/#pauseonmarkers)
 option which tells the player to automatically pause the playback when reaching
 next marker. This is super useful for "live" demos as it lets you discuss
 terminal output at precise points.
 
 This concludes player-related improvements. In the [next
 post](/post/whats-new-in-the-recorder/), we'll take a look at what's new in [the
-recorder](https://github.com/asciinema/asciinema), aka CLI.
+recorder](https://docs.asciinema.org/manual/cli/), aka CLI.
 
 Until my next update, happy recording!
 
@@ -190,7 +190,7 @@ function playKeypressSound(e) {
   source.start(0);
 }
 
-player1.addEventListener('input', playKeypressSound); 
+player1.addEventListener('input', playKeypressSound);
 
 const player2 = AsciinemaPlayer.create('/casts/misc.cast', document.getElementById('demo-evol-markers'), {
     ...opts,

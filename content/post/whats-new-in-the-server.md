@@ -7,9 +7,9 @@ title = "What's new in asciinema - part III: the server"
 This is part 3 in the "what's new in asciinema" series. In the [first
 part](/post/whats-new-in-the-player/) we looked at the player, in the [second
 part](/post/whats-new-in-the-recorder/) we covered the recorder, and in this one
-we'll focus on [the server](https://github.com/asciinema/asciinema-server).
+we'll focus on [the server](https://docs.asciinema.org/manual/server/).
 
-Let's begin with OPS stuff.
+Let's begin with OPS-related stuff.
 
 [asciinema.org](https://asciinema.org) uses email-based login flow, where you
 get short lived login link (some call it "magic link"). Over last 10 years that
@@ -23,7 +23,7 @@ been reliable (so far) and ridiculously cheap. asciinema server uses
 and thanks to Bamboo's pluggable adapters it was trivial to switch. If you want
 to use SES for email delivery with your own instance of the server then follow
 the [instructions
-here](https://github.com/asciinema/asciinema-server/wiki/SMTP-configuration#aws-ses).
+here](https://docs.asciinema.org/manual/server/self-hosting/configuration/#aws-ses).
 
 
 <!--more-->
@@ -80,9 +80,9 @@ received a bit of polish.  Recording index pages were updated to use an
 appropriate number of thumbnail columns on various screen sizes.
 
 Lastly, [markers feature of the
-player](https://github.com/asciinema/asciinema-player#markers-1) has been
-exposed on recording settings page - you can configure a list of markers by
-simply listing their times and labels like this:
+player](https://docs.asciinema.org/manual/player/markers/) has been exposed on
+recording settings page - you can configure a list of markers by simply listing
+their times and labels like this:
 
 ```
 5.0 - Intro

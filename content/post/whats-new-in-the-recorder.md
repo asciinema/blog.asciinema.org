@@ -6,7 +6,7 @@ title = "What's new in asciinema - part II: the recorder"
 
 This is part 2 in the "what's new in asciinema" series. In the [first
 part](/post/whats-new-in-the-player/) I looked at the player, in this one I'll
-focus on [the recorder](https://github.com/asciinema/asciinema) (aka CLI).
+focus on [the recorder](https://docs.asciinema.org/manual/cli/) (aka CLI).
 
 Fun fact: people use asciinema to record the terminal on Android. I would never
 have thought of that but apparently there are folks who do that. Anyway,
@@ -21,7 +21,7 @@ version 2.1 of the recorder. This is handy when you realize mid-session that you
 need to paste a secret and you don't want it to be recorded. Hit `C-\` (ctrl +
 backslash) to mute, do the secret work, then unmute by using the same hotkey.
 The hotkey can be changed with `rec.pause_key` option in [recorder's config
-file](https://github.com/asciinema/asciinema#configuration-file).
+file](https://docs.asciinema.org/manual/cli/configuration/).
 
 Out of necessity, the recorder received desktop notification integration in the
 same release. See, asciinema recorder can't really print anything to the
@@ -108,9 +108,9 @@ asciinema play --stream=i demo.cast | asciinema rec - | websocat -q ws-l:127.0.0
 
 A live stream is driven by key presses from an existing recording! 🤯
 
-This concludes recorder-related improvements. I hope you enjoyed it. In the [next
-post](/post/whats-new-in-the-server/), we'll take a look at what's new in [the
-server](https://github.com/asciinema/asciinema-server) and maybe a few other
+This concludes recorder-related improvements. I hope you enjoyed it. In the
+[next post](/post/whats-new-in-the-server/), we'll take a look at what's new in
+[the server](https://docs.asciinema.org/manual/server/) and maybe a few other
 things.
 
 Until my next update, happy recording!

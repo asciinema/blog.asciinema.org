@@ -33,7 +33,7 @@ your own (simplified) `script` in Python with nothing more than standard
 library. I tested this on Linux and OS X - worked beautifully. So I decided to
 drop `script` and create my own recorder with its own JSON-based recording
 format -
-[asciicast](https://github.com/asciinema/asciinema/blob/develop/doc/asciicast-v1.md).
+[asciicast](https://docs.asciinema.org/manual/asciicast/v1/).
 The rest is history.
 
 Fast-forward to 2023. `script` on all popular platforms, including macOS,
@@ -48,16 +48,12 @@ allows fetching and parsing files in any format with relative ease.
 
 Which brings us to recently released [asciinema player
 3.4.0](https://github.com/asciinema/asciinema-player/releases/tag/v3.4.0), which
-added [support for additional recording
-formats](https://github.com/asciinema/asciinema-player#playing-other-recording-formats)
-through
-[parsers](https://github.com/asciinema/asciinema-player/blob/develop/src/parser/README.md).
-In addition to asciicast
-([v1](https://github.com/asciinema/asciinema/blob/develop/doc/asciicast-v1.md)
-and
-[v2](https://github.com/asciinema/asciinema/blob/develop/doc/asciicast-v2.md)),
-which has been THE recording format of the player since the beginning, asciinema
-player can now replay typescript recordings, [ttyrec
+added support for additional recording formats through
+[parsers](https://docs.asciinema.org/manual/player/parsers/). In addition to
+asciicast ([v1](https://docs.asciinema.org/manual/asciicast/v1/) and
+[v2](https://docs.asciinema.org/manual/asciicast/v2/)), which has been THE
+recording format of the player since the beginning, asciinema player can now
+replay typescript recordings, [ttyrec
 recordings](https://nethackwiki.com/wiki/Ttyrec) (produced by
 [ttyrec](http://0xcc.net/ttyrec/), [termrec](http://angband.pl/termrec.html) or
 [ipbt](https://www.chiark.greenend.org.uk/~sgtatham/ipbt/)), as well as any
@@ -84,10 +80,10 @@ AsciinemaPlayer.create({
 }, document.getElementById('demo'));
 ```
 
-See [parsers documention](https://github.com/asciinema/asciinema-player/blob/develop/src/parser/README.md) for more details.
+See [parsers documention](https://docs.asciinema.org/manual/player/parsers/) for more details.
 
 Note: typescript and ttyrec recordings can be used with [self-hosted asciinema
-player](https://github.com/asciinema/asciinema-player). As of this writing
+player](https://docs.asciinema.org/manual/player/). As of this writing
 [asciinema.org](https://asciinema.org) supports asciicast files only.
 
 One more thing...
