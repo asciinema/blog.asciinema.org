@@ -108,11 +108,9 @@ needed either - clicking on the progress bar in the new player, to jump to the
 desired time in the recording, results in instantaneous jump, even when it has to
 feed the emulator with megabytes of data to parse and interpret.
 
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/asciinema-player@3.0.0-beta.4/dist/bundle/asciinema-player.css" />
 <div id="demo" class="player"></div>
-<script src="https://unpkg.com/asciinema-player@3.0.0-beta.4/dist/bundle/asciinema-player.min.js"></script>
 <script>
-  AsciinemaPlayer.create('https://asciinema.org/a/20055.cast', document.getElementById('demo'), {
+  createPlayer('https://asciinema.org/a/20055.cast', document.getElementById('demo'), {
     speed: 3,
     poster: 'npt:9.5'
   });
