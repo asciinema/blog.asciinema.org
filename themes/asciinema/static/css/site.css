@@ -209,7 +209,7 @@ div.player {
   margin: 3em 0;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { */
   html, body {
     color: #e8e6e3;
   }
@@ -229,7 +229,7 @@ div.player {
   #header .icon svg {
     color: #e8e6e3;
   }
-}
+/* } */
 
 @font-face {
     font-family: 'JetBrains Mono';
