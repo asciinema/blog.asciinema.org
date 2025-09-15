@@ -16,10 +16,6 @@
 	      hugo
 	      gnumake
             ];
-
-            shellHook = ''
-	      alias serve='hugo server --buildDrafts --watch'
-            '';
           };
         }
       );
