@@ -109,11 +109,11 @@ const ROWS = LINES_PER_FRAME - 1;
 async function parseAsciimation(response) {
   const text = await response.text();
   const lines = text.split('\n');
-  const output = [];
+  const events = [];
   let time = 0;
   let prevFrameDuration = 0;
 
-  output.push([0, '\x9b?25l']); // hide cursor
+  events.push([0, 'o', '\x9b?25l']); // hide cursor
 
   for (let i = 0; i + LINES_PER_FRAME - 1 < lines.length; i += LINES_PER_FRAME) {
     time += prevFrameDuration;
@@ -122,10 +122,10 @@ async function parseAsciimation(response) {
     let text = '\x1b[H'; // move cursor home
     text += '\x1b[J'; // clear screen
     text += frame; // print current frame's lines
-    output.push([time / 1000, text]);
+    events.push([time / 1000, 'o', text]);
   }
 
-  return { cols: COLUMNS, rows: ROWS, output };
+  return { cols: COLUMNS, rows: ROWS, events };
 }
 
 AsciinemaPlayer.create(
@@ -147,12 +147,12 @@ const ROWS = LINES_PER_FRAME - 1;
 async function parseAsciimation(response) {
   const text = await response.text();
   const lines = text.split('\n');
-  const output = [];
+  const events = [];
 
   let time = 0;
   let prevFrameDuration = 0;
 
-  output.push([0, '\x9b?25l']); // hide cursor
+  events.push([0, 'o', '\x9b?25l']); // hide cursor
 
   for (let i = 0; i + LINES_PER_FRAME - 1 < lines.length; i += LINES_PER_FRAME) {
     time += prevFrameDuration;
@@ -161,13 +161,13 @@ async function parseAsciimation(response) {
     let text = '\x1b[H'; // move cursor home
     text += '\x1b[J'; // clear screen
     text += frame; // print current frame's lines
-    output.push([time / 1000, text]);
+    events.push([time / 1000, 'o', text]);
   }
 
-  return { cols: COLUMNS, rows: ROWS, output };
+  return { cols: COLUMNS, rows: ROWS, events };
 }
 
-AsciinemaPlayer.create(
+createPlayer(
   { url: '/starwars.txt', parser: parseAsciimation },
   document.getElementById('demo-starwars'),
   {
