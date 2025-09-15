@@ -161,7 +161,7 @@ const opts = {
   theme: 'dracula'
 };
 
-const player1 = AsciinemaPlayer.create({
+const player1 = await createPlayer({
   url: '/casts/typing.cast',
   inputOffset: -0.125
 }, document.getElementById('demo-evol-input'), {
@@ -192,7 +192,7 @@ function playKeypressSound(e) {
 
 player1.addEventListener('input', playKeypressSound);
 
-const player2 = AsciinemaPlayer.create('/casts/misc.cast', document.getElementById('demo-evol-markers'), {
+createPlayer('/casts/misc.cast', document.getElementById('demo-evol-markers'), {
     ...opts,
     controls: true,
     poster: 'npt:27.4',

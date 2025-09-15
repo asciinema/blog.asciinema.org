@@ -228,7 +228,7 @@ const opts = {
   autoPlay: true
 };
 
-const player1 = AsciinemaPlayer.create(
+createPlayer(
   'wss://asciinema.org/ws/s/olesiD03BIFH6Yz1',
   document.getElementById('demo-btop'), {
   ...opts,
