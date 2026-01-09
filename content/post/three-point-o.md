@@ -16,6 +16,8 @@ notes](https://github.com/asciinema/asciinema/releases/tag/v3.0.0) and the
 detailed
 [changelog](https://github.com/asciinema/asciinema/blob/develop/CHANGELOG.md).
 
+<!--more-->
+
 First, let's get the Rust rewrite topic out of the way. I did it because I felt
 like it. But seriously, I felt like it because I prefer working with Rust 100x
 more than with Python these days. And this type of code, with syscalls and
